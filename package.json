@@ -9,7 +9,7 @@
   "scripts": {
     "start": "forever server.js",
     "server": "nodemon server.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [
     "mern"
