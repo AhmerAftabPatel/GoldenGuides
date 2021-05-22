@@ -61,6 +61,6 @@ app.use((err, req, res, next) => {
 //   });
 // }
 
-const port = process.env.PORT || 8700;
+const port = process.env.PORT || 8200;
 
 app.listen(port, () => `Server running on port ${port} 🔥`);
