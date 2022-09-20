@@ -7,8 +7,8 @@
     "node": "14.7.0"
   },
   "scripts": {
-    "start": "nodemon server.js",
-    "server": "nodemon server.js",
+    "start": "node server.js",
+    "server": "node server.js",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [
