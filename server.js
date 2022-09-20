@@ -45,6 +45,10 @@ app.use("/api", postRoutes);
 app.use("/api", authRoutes);
 app.use("/api", userRoutes);
 
+app.get("/",(req,res) => {
+  res.send("it works")
+})
+
 app.use((err, req, res, next) => {
   if (err.name === "UnauthorizedError") {
     res.status(401).json({
