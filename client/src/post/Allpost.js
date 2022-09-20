@@ -58,7 +58,7 @@ class Allpost extends Component {
     );
   };
   render() {
-    const { posts, loading, page } = this.state;
+    const { posts, loading } = this.state;
     if (loading) {
       return <h2>Loading...</h2>;
     }

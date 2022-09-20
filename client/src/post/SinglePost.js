@@ -4,6 +4,7 @@ import { Link, Redirect } from "react-router-dom";
 import { isAuthenticated } from "../auth";
 import Comment from "./Comment";
 import Logo from "../core/Logo.png";
+import { API } from "../constants";
 class SinglePost extends Component {
   state = {
     post: "",
@@ -85,7 +86,7 @@ class SinglePost extends Component {
         </Link>
         <h2>{post.title}</h2>
         <img
-          src={`/api/post/photo/${post._id}`}
+          src={`${API}/api/post/photo/${post._id}`}
           alt={post.title}
           onError={(i) => (i.target.src = `${Logo}`)}
           className="img-fluid mb-3"

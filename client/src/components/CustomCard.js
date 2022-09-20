@@ -1,15 +1,15 @@
 import React from "react";
 import { Fragment } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../core/Logo.png";
 import { Card, Icon, Image } from "semantic-ui-react";
+import { API } from "../constants";
 
 /**
  * @author
  * @function CustomCard
  **/
 
-const CustomCard = ({ i, post, posterName, posterId }) => {
+const CustomCard = ({ i, post }) => {
   return (
     <Fragment>
       <Card key={i} style={{ height: "350px" }}>
@@ -19,7 +19,7 @@ const CustomCard = ({ i, post, posterName, posterId }) => {
             width: "100%",
             backgroundColor: "#0E2F56"
           }}
-          src={`/api/post/photo/${post._id}`}
+          src={`${API}/api/post/photo/${post._id}`}
           wrapped
           ui={false}
         />

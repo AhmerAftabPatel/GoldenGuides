@@ -1,4 +1,5 @@
 import axios from "axios";
+import { API } from "../constants";
 export const authenticate = (data, next) => {
   if (typeof window !== "undefined") {
     //console.log(data)
@@ -64,7 +65,7 @@ export const isAuthenticated = () => {
 };
 export const socialLogin = async (user) => {
   try {
-    const response = await fetch(`/api/social-login`, {
+    const response = await fetch(`${API}/api/social-login`, {
       method: "POST",
       headers: {
         Accept: "application/json",

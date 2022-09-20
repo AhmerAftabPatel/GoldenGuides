@@ -1,4 +1,5 @@
 import axios from "axios";
+import { API } from "../constants";
 
 export const create = async (userId, token, post) => {
   return await axios
@@ -35,7 +36,7 @@ export const pageList = async (page) => {
 };
 
 export const like = (userId, token, postId) => {
-  return fetch(`/api/post/like`, {
+  return fetch(`${API}/api/post/like`, {
     method: "PUT",
     headers: {
       Accept: "application/json",
@@ -51,7 +52,7 @@ export const like = (userId, token, postId) => {
 };
 
 export const unlike = (userId, token, postId) => {
-  return fetch(`/api/post/unlike`, {
+  return fetch(`${API}/api/post/unlike`, {
     method: "PUT",
     headers: {
       Accept: "application/json",
@@ -117,7 +118,7 @@ export const update = async (postId, token, post) => {
 };
 
 export const comment = (userId, token, postId, comment) => {
-  return fetch(`/api/post/comment`, {
+  return fetch(`${API}/api/post/comment`, {
     method: "PUT",
     headers: {
       Accept: "application/json",
@@ -133,7 +134,7 @@ export const comment = (userId, token, postId, comment) => {
 };
 
 export const uncomment = (userId, token, postId, comment) => {
-  return fetch(`/api/post/uncomment`, {
+  return fetch(`${API}/api/post/uncomment`, {
     method: "PUT",
     headers: {
       Accept: "application/json",

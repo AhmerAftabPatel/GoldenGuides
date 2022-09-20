@@ -78,10 +78,7 @@ class Profile extends Component {
             <nav aria-label="breadcrumb" class="main-breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                  <a href="#">Home</a>
-                </li>
-                <li class="breadcrumb-item">
-                  <a href="#">User</a>
+                  <a href="/">Home</a>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">
                   User Profile

@@ -1,9 +1,8 @@
 import React from "react";
 import { NavLink, withRouter } from "react-router-dom";
-import { Header, Icon } from "semantic-ui-react";
+import {  Icon } from "semantic-ui-react";
 
 import { logout, isAuthenticated } from "../auth";
-import Logo from "./Logo.png";
 const Navbar = ({ history }) => {
   const name = isAuthenticated() ? isAuthenticated().user.name : "";
   const id = isAuthenticated() ? isAuthenticated().user._id : "";

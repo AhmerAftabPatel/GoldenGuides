@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { isAuthenticated } from "../auth"; // eslint-disable-next-line
 import { Redirect } from "react-router-dom";
-import { read, update, updateUser } from "./apiUser";
-import { Button, Checkbox, Form } from "semantic-ui-react";
+import { read, update } from "./apiUser";
+import { Button,  Form } from "semantic-ui-react";
 
 class EditProfile extends Component {
   constructor() {

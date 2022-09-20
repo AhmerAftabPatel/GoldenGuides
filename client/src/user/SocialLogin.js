@@ -7,19 +7,20 @@ class SocialLogin extends Component {
   constructor() {
     super();
     this.state = {
-      redirectToReferrer: false,
+      redirectToReferrer: false
     };
   }
 
-  responseGoogle = (response) => {
+  responseGoogle = response => {
     const { googleId, name, email, imageUrl } = response.profileObj;
+    console.log("if", response);
     const user = {
       password: googleId,
       name: name,
       email: email,
       photo: imageUrl,
     };
-    // console.log("user obj to social login: ", user);
+    console.log("user obj to social login: ", user);
     socialLogin(user).then((data) => {
       console.log("signin data: ", data);
       if (data.error) {
@@ -43,11 +44,12 @@ class SocialLogin extends Component {
 
     return (
       <GoogleLogin
-        clientId="389504607319-6t0asgo70tdmtss1jed1q4u00gej3p3r.apps.googleusercontent.com"
+        clientId="389504607319-r5vsv6r5nm0qgtdt06qkd3e2ion13f7g.apps.googleusercontent.com"
         buttonText="Login with Google"
         theme="dark"
         onSuccess={this.responseGoogle}
         onFailure={this.responseGoogle}
+        cookiePolicy={"single_host_origin"}
       />
     );
   }
